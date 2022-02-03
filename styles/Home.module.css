@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 992px) {
+  .main {
+    display: none;
+  }
+}
+
 .footer {
   display: flex;
   flex: 1;
