@@ -149,3 +149,7 @@ li {
   align-items: center;
   cursor: pointer;
 }
+
+img#teamMemberDp:hover {
+  border-color: #4896ef;
+}

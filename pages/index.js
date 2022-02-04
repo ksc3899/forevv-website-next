@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import GooglePlay from "../public/GooglePlayStoreBadge.svg";
 import AppStore from "../public/AppStoreBadge.svg";
 import EarlyAccess from "../components/EarlyAccess";
-import Feature1Mobile from "../public/Feature1Mobile.svg";
 
 export default function Home() {
   return (
