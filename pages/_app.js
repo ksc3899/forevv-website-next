@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Navbar from "../components/navbar";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,8 +18,11 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
+      <div id="parentDiv">
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </>
   );
 }

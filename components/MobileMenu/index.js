@@ -50,27 +50,31 @@ export const MobileMenu = () => {
               }}
             />
             <div className="text-center flex flex-col gap-16">
-              <Link href="/" id="navbarLink" onClick={() => toggleOpen()}>
-                <a className="mx-6 font-semibold text-2xl max-w-min ml-auto mr-auto">
+              <Link href="/" id="navbarLink">
+                <a
+                  className="mx-6 font-semibold text-2xl max-w-min ml-auto mr-auto"
+                  onClick={() => toggleOpen()}
+                >
                   Home
                 </a>
               </Link>
-              <Link
-                href="about-us"
-                id="navbarLink"
-                onClick={() => toggleOpen()}
-              >
-                <a className="mx-6 font-semibold text-2xl max-w-max ml-auto mr-auto">
+              <Link href="/about-us" id="navbarLink">
+                <a
+                  className="mx-6 font-semibold text-2xl max-w-max ml-auto mr-auto"
+                  onClick={() => toggleOpen()}
+                >
                   About Us
                 </a>
               </Link>
-              <div
-                className="flex mx-6 items-center text-center justify-center"
-                onClick={() => toggleOpen()}
-              >
-                <p className="font-semibold text-2xl pl-8">Elevator Pitch</p>
-                <BiLinkExternal className="h-5 w-5 ml-2" />
-              </div>
+              <Link href="/sys" id="navbarLink">
+                <a
+                  className="flex mx-6 items-center text-center justify-center"
+                  onClick={() => toggleOpen()}
+                >
+                  <p className="font-semibold text-2xl pl-8">Elevator Pitch</p>
+                  <BiLinkExternal className="h-5 w-5 ml-2" />
+                </a>
+              </Link>
               <a
                 onClick={() => {
                   toggleOpen();

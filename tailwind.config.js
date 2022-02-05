@@ -34,7 +34,7 @@ module.exports = {
         md: "1.5rem",
         lg: "1rem",
         xl: "1.875rem",
-        "2xl": "2.5rem",
+        "2xl": "1rem",
       },
     },
   },

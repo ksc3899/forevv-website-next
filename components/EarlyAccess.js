@@ -3,8 +3,12 @@ import EarlyAccessSVG from "../public/EarlyAccessSVG.svg";
 import Trophy from "../public/trophy.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { addEarlyAccessDetails } from "../Firebase/Database";
 
 function EarlyAccess() {
+  const [name, setName] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [email, setEmail] = React.useState("");
   return (
     <div
       id="early-access-div"
@@ -44,10 +48,10 @@ function EarlyAccess() {
         </div>
       </div>
       <div className="hidden lg:block lg:col-span-4 2xl:hidden px-4">
-        <Image src="/EarlyAccessSVG.svg" width={306} height={313} />
+        <Image src="/EarlyAccessSVG.svg" width={306} height={313} priority />
       </div>
       <div className="col-span-1 hidden 2xl:block lg:col-span-4 px-3">
-        <Image src="/EarlyAccessSVG.svg" width={390} height={400} />
+        <Image src="/EarlyAccessSVG.svg" width={390} height={400} priority />
       </div>
 
       <div className="col-span-12 lg:col-span-5 lg:mt-5 2xl:mt-6 text-left justify-center">
@@ -58,16 +62,25 @@ function EarlyAccess() {
           <input
             type="text"
             placeholder="Your name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="col-span-2 border-forevv-blue rounded-lg border lg:border-2 h-10 2xl:h-14 px-5"
           />
           <input
-            type="text"
+            type="tel"
             placeholder="Contact Number"
+            required
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
             className="col-span-2 lg:col-span-1 border-forevv-blue rounded-lg border lg:border-2  h-10 2xl:h-14 px-5"
           />
           <input
             type="email"
             placeholder="E-mail"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="col-span-2 lg:col-span-1 border-forevv-blue rounded-lg border lg:border-2 h-10 2xl:h-14 px-5"
           />
           <motion.button
@@ -75,6 +88,8 @@ function EarlyAccess() {
             whileTap={{ scale: 0.95 }}
             className="col-span-2 rounded-full lg:mt-6 2xl:mt-8 bg-forevv-blue w-32 h-10 lg:w-44 lg:h-11 2xl:w-60 2xl:h-14 ml-auto mr-auto"
             style={{ maxWidth: 266 }}
+            onClick={() => addEarlyAccessDetails(name, contact, email)}
+            // onClick={() => getData()}
           >
             <p className="text-sm lg:text-base 2xl:text-xl font-semibold text-white">
               Let me try!

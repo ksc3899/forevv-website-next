@@ -57,12 +57,28 @@ export default function AboutUs() {
         </div>
 
         <div className="col-span-2 lg:col-span-1 flex flex-row justify-around">
-          <img src="/Logo/Nasscom.svg" className="max-h-40 md:max-h-fit " />
-          <img src="/Logo/Caarya.svg" className="max-h-40 md:max-h-fit " />
+          <img
+            src="/Logo/Nasscom.svg"
+            loading="eager"
+            className="max-h-40 md:max-h-fit "
+          />
+          <img
+            src="/Logo/Caarya.svg"
+            loading="eager"
+            className="max-h-40 md:max-h-fit "
+          />
         </div>
         <div className="col-span-2 lg:col-span-1 flex flex-row justify-around">
-          <img src="/Logo/IED.svg" className="max-h-40 md:max-h-fit " />
-          <img src="/Logo/Xartup.svg" className="max-h-40 md:max-h-fit " />
+          <img
+            src="/Logo/IED.svg"
+            loading="eager"
+            className="max-h-40 md:max-h-fit "
+          />
+          <img
+            src="/Logo/Xartup.svg"
+            loading="eager"
+            className="max-h-40 md:max-h-fit "
+          />
         </div>
       </div>
 
@@ -93,10 +109,15 @@ export default function AboutUs() {
                   boxShadow: "4px 8px 10px #6D8DAD33",
                   borderRadius: 8,
                 }}
-                className="flex flex-col text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"
+                className="flex flex-col bg-white text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"
               >
                 <div className="hidden lg:block">
-                  <Image src="/Logo/MEITY.svg" height={186} width={248} />
+                  <Image
+                    src="/Logo/MEITY.svg"
+                    height={186}
+                    width={248}
+                    priority
+                  />
                 </div>
                 <div className="lg:hidden mt-6">
                   <Image
@@ -104,6 +125,7 @@ export default function AboutUs() {
                     height={105}
                     width={140}
                     className="lg:hidden"
+                    priority
                   />
                 </div>
                 <p className="relative text-base lg:text-xl 2xl:text-2xl lg:ml-10">
@@ -119,10 +141,10 @@ export default function AboutUs() {
                   boxShadow: "4px 8px 10px #6D8DAD33",
                   borderRadius: 8,
                 }}
-                className="flex flex-col text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"
+                className="flex flex-col bg-white text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"
               >
                 <div className="hidden lg:block">
-                  <Image src="/Logo/EO.svg" height={186} width={248} />
+                  <Image src="/Logo/EO.svg" height={186} width={248} priority />
                 </div>
                 <div className="lg:hidden mt-6">
                   <Image
@@ -130,6 +152,7 @@ export default function AboutUs() {
                     height={105}
                     width={140}
                     className="lg:hidden"
+                    priority
                   />
                 </div>
                 <p className="relative text-base lg:text-xl 2xl:text-2xl lg:ml-10">
@@ -145,18 +168,6 @@ export default function AboutUs() {
       <TeamComponent />
 
       <EarlyAccess />
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }

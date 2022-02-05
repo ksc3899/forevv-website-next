@@ -153,3 +153,30 @@ li {
 img#teamMemberDp:hover {
   border-color: #4896ef;
 }
+
+#navbarLink.active {
+  font-weight: bold;
+  color: #4896ef;
+  border-bottom: 2px solid #4896ef;
+}
+
+#navbarLink:hover {
+  font-weight: bold;
+}
+
+#parentDiv {
+  background-image: linear-gradient(
+      to right,
+      white 40%,
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../public/bkg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 976px) {
+  #parentDiv {
+    background-image: none;
+  }
+}

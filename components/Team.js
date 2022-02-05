@@ -125,6 +125,7 @@ export default function TeamComponent() {
                 <div className=" border-2 rounded-2xl border-forevv-blue mx-1 justify-center p-2 lg:p-14 bg-white text-center">
                   <div className="w-fit ml-auto mr-auto">
                     <img
+                      loading="eager"
                       src={item.pic}
                       alt=""
                       style={{ maxWidth: 125, maxHeight: 125, marginTop: 28 }}
@@ -138,6 +139,7 @@ export default function TeamComponent() {
                   <div className="flex flex-row justify-center">
                     {item.linkedin !== "" ? (
                       <img
+                        loading="eager"
                         src="/Linkedin.svg"
                         alt=""
                         style={{ height: 60, width: 60 }}
@@ -145,6 +147,7 @@ export default function TeamComponent() {
                     ) : null}
                     {item.instagram !== "" ? (
                       <img
+                        loading="eager"
                         src="/Insta.svg"
                         alt=""
                         style={{ height: 60, width: 60 }}
@@ -166,6 +169,7 @@ export default function TeamComponent() {
             style={{ width: "293px", height: "380px" }}
           >
             <img
+              loading="eager"
               src="/Team/SaiCharan.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -181,6 +185,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[0])}
             />
             <img
+              loading="eager"
               src="/Team/ShivanshShukla.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -195,6 +200,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[1])}
             />
             <img
+              loading="eager"
               src="/Team/AarushSinha.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -209,6 +215,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[2])}
             />
             <img
+              loading="eager"
               src="/Team/VanshikaThakur.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -223,6 +230,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[3])}
             />
             <img
+              loading="eager"
               src="/Team/GeethaCharan.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -238,6 +246,7 @@ export default function TeamComponent() {
             />
 
             <img
+              loading="eager"
               src="/Team/KrishnaVarma.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -253,6 +262,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[5])}
             />
             <img
+              loading="eager"
               src="/Logo/mobileLogo.svg"
               className="rounded-full"
               style={{
@@ -275,9 +285,10 @@ export default function TeamComponent() {
           <Rectangle2Small />
           <div
             className="absolute"
-            style={{ width: "291px", height: "130px", top: 410 }}
+            style={{ width: "291px", height: "130px", top: 415 }}
           >
             <img
+              loading="eager"
               src="/Team/AnujBatra.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -292,6 +303,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[6])}
             />
             <img
+              loading="eager"
               src="/Team/AshutoshTewari.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -307,6 +319,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[7])}
             />
             <img
+              loading="eager"
               src="/Team/NikhilSrivastava.svg"
               id="teamMemberDp"
               className="border-4 rounded-full"
@@ -332,6 +345,7 @@ export default function TeamComponent() {
             style={{ width: "414px", height: "500px" }}
           >
             <img
+              loading="eager"
               src="/Team/SaiCharan.svg"
               id="teamMemberDp"
               width={140}
@@ -347,6 +361,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[0])}
             />
             <img
+              loading="eager"
               src="/Team/ShivanshShukla.svg"
               id="teamMemberDp"
               width={140}
@@ -361,6 +376,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[1])}
             />
             <img
+              loading="eager"
               src="/Team/AarushSinha.svg"
               width={140}
               height={140}
@@ -376,6 +392,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[2])}
             />
             <img
+              loading="eager"
               src="/Team/VanshikaThakur.svg"
               width={140}
               height={140}
@@ -391,6 +408,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[3])}
             />
             <img
+              loading="eager"
               src="/Team/GeethaCharan.svg"
               width={140}
               height={140}
@@ -406,6 +424,7 @@ export default function TeamComponent() {
             />
 
             <img
+              loading="eager"
               src="/Team/KrishnaVarma.svg"
               width={140}
               height={140}
@@ -421,6 +440,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[5])}
             />
             <img
+              loading="eager"
               src="/Logo/mobileLogo.svg"
               width={140}
               height={140}
@@ -447,6 +467,7 @@ export default function TeamComponent() {
             style={{ width: "414px", height: "180px", top: 640 }}
           >
             <img
+              loading="eager"
               src="/Team/AnujBatra.svg"
               id="teamMemberDp"
               width={140}
@@ -462,6 +483,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[6])}
             />
             <img
+              loading="eager"
               src="/Team/AshutoshTewari.svg"
               id="teamMemberDp"
               width={140}
@@ -477,6 +499,7 @@ export default function TeamComponent() {
               onClick={() => setData(TeamData[7])}
             />
             <img
+              loading="eager"
               src="/Team/NikhilSrivastava.svg"
               id="teamMemberDp"
               width={140}
@@ -515,7 +538,11 @@ export default function TeamComponent() {
                 href={data.linkedin}
                 target={"_blank"}
               >
-                <img src="/Linkedin.svg" style={{ transform: "scale(0.71)" }} />
+                <img
+                  loading="eager"
+                  src="/Linkedin.svg"
+                  style={{ transform: "scale(0.71)" }}
+                />
               </motion.a>
             ) : null}
             {data.instagram !== "" ? (
@@ -524,7 +551,11 @@ export default function TeamComponent() {
                 href={data.instagram}
                 target={"_blank"}
               >
-                <img src="/Insta.svg" style={{ transform: "scale(0.71)" }} />
+                <img
+                  loading="eager"
+                  src="/Insta.svg"
+                  style={{ transform: "scale(0.71)" }}
+                />
               </motion.a>
             ) : null}
           </div>

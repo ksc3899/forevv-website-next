@@ -17,18 +17,30 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex items-center h-full relative ml-auto mr-0">
-          <Link href="/" id="navbarLink">
-            <a className="mx-5 font-semibold text-base xl:text-xl">Home</a>
+          <Link href="/">
+            <a
+              id="navbarLink"
+              className="mx-5 font-semibold text-base xl:text-xl"
+            >
+              Home
+            </a>
           </Link>
-          <Link href="about-us" id="navbarLink">
-            <a className="mx-5 font-semibold text-base xl:text-xl">About Us</a>
+          <Link href="/about-us">
+            <a
+              id="navbarLink"
+              className="mx-5 font-semibold text-base xl:text-xl"
+            >
+              About Us
+            </a>
           </Link>
-          <div className="flex mx-5 items-center">
-            <p className="font-semibold text-base xl:text-xl mr-2">
-              Elevator Pitch
-            </p>
-            <BiLinkExternal className="mt-auto mb-auto" />
-          </div>
+          <Link href="/sys">
+            <a className="flex mx-5 items-center">
+              <p className="font-semibold text-base xl:text-xl mr-2">
+                Elevator Pitch
+              </p>
+              <BiLinkExternal className="mt-auto mb-auto" />
+            </a>
+          </Link>
           <a
             id="navbarLink"
             onClick={() => {

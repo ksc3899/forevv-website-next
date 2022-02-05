@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
-import GooglePlay from "../public/GooglePlayStoreBadge.svg";
-import AppStore from "../public/AppStoreBadge.svg";
+import GooglePlay from "../public/google-play.svg";
+import AppStore from "../public/app-store.svg";
 import EarlyAccess from "../components/EarlyAccess";
 
 export default function Home() {
@@ -43,18 +43,16 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-5 relative ">
-            <Image src="/SVGHome.svg" layout="fill" />
+            <Image src="/SVGHome.svg" layout="fill" priority />
           </div>
           <div className="col-span-7 flex items-center mt-24 justify-start">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
               Coming Soon on
             </p>
-            <AppStore
-              alt=""
-              className="mx-5"
-              style={{ width: 165, height: 55 }}
-            />
-            <GooglePlay alt="" style={{ width: 165, height: 55 }} />
+            <AppStore alt="" className="ml-5 mr-2" />
+            <p className="text-xl font-bold mx-2">App Store</p>
+            <GooglePlay className="mx-2" />
+            <p className="text-xl font-bold ml-2">Playstore</p>
           </div>
         </div>
 
@@ -92,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-6 relative">
-            <Image src="/SVGHome.svg" layout="fill" />
+            <Image src="/SVGHome.svg" layout="fill" priority />
           </div>
           <div className="col-span-6 flex items-center mt-16 justify-center lg:justify-start">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
@@ -100,17 +98,19 @@ export default function Home() {
             </p>
             <AppStore
               alt=""
-              className="mx-5"
-              style={{ width: 117, height: 40 }}
+              className="ml-4 mr-2"
+              style={{ width: 32, height: 32 }}
             />
-            <GooglePlay alt="" style={{ width: 117, height: 40 }} />
+            <p className="text-lg font-bold mx-2">App Store</p>
+            <GooglePlay className="mx-2" style={{ width: 32, height: 32 }} />
+            <p className="text-lg font-bold ml-2">Playstore</p>
           </div>
         </div>
       </main>
 
       <div className="grid lg:hidden grid-rows-2 grid-cols-12 mx-6 pt-12 ">
         <div className="col-span-12 relative">
-          <Image src="/SVGHome.svg" layout="fill" />
+          <Image src="/SVGHome.svg" layout="fill" priority />
         </div>
 
         <div className="col-span-12 mt-6 text-center">
@@ -143,23 +143,28 @@ export default function Home() {
             </p>
             <AppStore
               alt=""
-              className="mx-5"
-              style={{ width: 72, height: 24 }}
+              className="mx-10"
+              style={{ width: 32, height: 32 }}
             />
-            <GooglePlay alt="" style={{ width: 72, height: 24 }} />
+            <GooglePlay alt="" style={{ width: 32, height: 32 }} />
           </div>
         </div>
       </div>
 
       <EarlyAccess />
 
-      <div className="grid grid-cols-12 relative mt-8 mb-14 lg:mb-36 lg:mt-20 items-center mx-6 lg:mx-0">
+      <div className="grid grid-cols-12 relative mt-8 lg:mt-20 items-center mx-6 lg:mx-0">
         <div className="col-span-12 lg:col-span-6">
           <p className="text-base font-semibold my-7 text-center lg:text-left lg:text-3xl 2xl:text-4xl lg:whitespace-pre-line">
             Create cool visual memory{"\n"} lanes!
           </p>
           <div className="col-span-12 relative flex justify-center lg:hidden">
-            <Image src="/Feature1Mobile.svg" width={300} height={173} />
+            <Image
+              src="/Feature1Mobile.svg"
+              width={300}
+              height={173}
+              priority
+            />
           </div>
           <p className="text-base font-regular mt-10 lg:mt-0 lg:text-xl 2xl:text-2xl whitespace-pre-line">
             'A walk down the memory lane' is no longer just in your head. You
@@ -176,24 +181,29 @@ export default function Home() {
           </p>
         </div>
         <div className="col-span-6 hidden lg:flex 2xl:hidden justify-end relative ml-12">
-          <Image src="/Feature1.svg" width={537} height={327} className="" />
+          <Image src="/Feature1.svg" width={537} height={327} priority />
         </div>
         <div className="col-span-6 hidden 2xl:flex justify-end relative ml-12">
-          <Image src="/Feature1.svg" width={754} height={435} />
+          <Image src="/Feature1.svg" width={754} height={435} priority />
         </div>
 
         <div className="col-span-7 hidden mt-3 lg:mt-10 2xl:mt-20 lg:block 2xl:hidden">
-          <Image src="/Feature2.svg" width={537} height={327} className="" />
+          <Image src="/Feature2.svg" width={537} height={327} priority />
         </div>
         <div className="col-span-7 hidden mt-3 lg:mt-20 2xl:block 2xl:mr-14">
-          <Image src="/Feature2.svg" width={754} height={435} className="" />
+          <Image src="/Feature2.svg" width={754} height={435} priority />
         </div>
         <div className="col-span-12 lg:col-span-5 lg:mt-20 2xl:ml-7">
           <p className="text-base font-semibold mt-7 lg:mb-7 text-center lg:text-left lg:text-3xl 2xl:text-4xl lg:whitespace-pre-line">
             You're now all set to live{"\n"} your memory lanes visually!
           </p>
           <div className="grid grid-cols-1 lg:hidden">
-            <Image src="/Feature2Mobile.svg" width={300} height={173} />
+            <Image
+              src="/Feature2Mobile.svg"
+              width={300}
+              height={173}
+              priority
+            />
           </div>
           <p className="text-base font-regular mt-5 lg:mt-0 lg:text-xl 2xl:text-2xl whitespace-pre-line">
             Record all your milestones, the ups and downs through the journey,
@@ -207,12 +217,12 @@ export default function Home() {
           </motion.p>
         </div>
 
-        <div className="col-span-12 lg:col-span-6 mt-auto mb-0">
+        <div className="col-span-12 lg:col-span-6 mt-auto">
           <p className="text-base font-semibold my-7 text-center lg:text-left lg:text-3xl 2xl:text-4xl lg:whitespace-pre-line">
             Come along with your{"\n"} loved ones!
           </p>
           <div className="col-span-12 relative flex justify-center lg:hidden">
-            <Image src="/Feature3.svg" width={300} height={173} />
+            <Image src="/Feature3.svg" width={300} height={173} priority />
           </div>
           <p className="text-base font-regular mt-10 lg:mt-0 lg:text-xl 2xl:text-2xl whitespace-pre-line">
             Collaborative Memory Lanes are common between you and your partner
@@ -229,25 +239,12 @@ export default function Home() {
           </p>
         </div>
         <div className="col-span-6 mt-10 hidden lg:flex 2xl:hidden justify-end relative ml-36">
-          <Image src="/Feature3.svg" width={537} height={327} className="" />
+          <Image src="/Feature3.svg" width={537} height={327} priority />
         </div>
         <div className="col-span-6 mt-20 hidden 2xl:flex justify-end relative ml-44 ">
-          <Image src="/Feature3.svg" width={626} height={424} />
+          <Image src="/Feature3.svg" width={626} height={424} priority />
         </div>
       </div>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
