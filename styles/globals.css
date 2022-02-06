@@ -154,10 +154,10 @@ img#teamMemberDp:hover {
   border-color: #4896ef;
 }
 
-#navbarLink.active {
+#navbarLinkActive {
   font-weight: bold;
-  color: #4896ef;
-  border-bottom: 2px solid #4896ef;
+  /* color: #4896ef; */
+  border-bottom: 3px solid #000;
 }
 
 #navbarLink:hover {

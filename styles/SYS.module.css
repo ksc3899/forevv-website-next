@@ -1,0 +1,63 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.SYSdiv {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #ffffff70 80%, white),
+    url("../public/SYSbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+}
+
+.SYSsvg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.Share_Your_Story {
+  transform: translate(271 108);
+  font-size: 120px;
+  letter-spacing: 0.044em;
+  font-family: "Just Another Hand", cursive;
+}
+
+@media only screen and (max-width: 1399px) {
+  .Share_Your_Story {
+    font-size: 85px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    padding: 0;
+  }
+  .Share_Your_Story {
+    font-size: 40px;
+  }
+}
+
+.input[type="file"] {
+  display: none;
+}

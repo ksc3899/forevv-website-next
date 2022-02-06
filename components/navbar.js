@@ -4,8 +4,10 @@ import Logo from "../public/Logo/logo.svg";
 import MobileLogo from "../public/Logo/mobileLogo.svg";
 import { MobileMenu } from "./MobileMenu";
 import { BiLinkExternal } from "react-icons/bi";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <header className="w-full z-10 fixed bg-white h-12 shadow-[0_4px_8px_#6D8DAD33] xl:h-14">
       <div className="mx-14 hidden md:flex flex-row h-full">
@@ -19,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center h-full relative ml-auto mr-0">
           <Link href="/">
             <a
-              id="navbarLink"
+              id={router.pathname == "/" ? "navbarLinkActive" : "navbarLink"}
               className="mx-5 font-semibold text-base xl:text-xl"
             >
               Home
@@ -27,7 +29,11 @@ export default function Navbar() {
           </Link>
           <Link href="/about-us">
             <a
-              id="navbarLink"
+              id={
+                router.pathname == "/about-us"
+                  ? "navbarLinkActive"
+                  : "navbarLink"
+              }
               className="mx-5 font-semibold text-base xl:text-xl"
             >
               About Us

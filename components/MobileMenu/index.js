@@ -5,6 +5,7 @@ import { MenuToggle } from "./MenuToggle";
 import Logo from "../../public/Logo/logo.svg";
 import Link from "next/link";
 import { BiLinkExternal } from "react-icons/bi";
+import { useRouter } from "next/router";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -29,7 +30,7 @@ const sidebar = {
 export const MobileMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-
+  const router = useRouter();
   return (
     <motion.nav
       initial={false}
@@ -50,16 +51,24 @@ export const MobileMenu = () => {
               }}
             />
             <div className="text-center flex flex-col gap-16">
-              <Link href="/" id="navbarLink">
+              <Link href="/">
                 <a
+                  id={
+                    router.pathname == "/" ? "navbarLinkActive" : "navbarLink"
+                  }
                   className="mx-6 font-semibold text-2xl max-w-min ml-auto mr-auto"
                   onClick={() => toggleOpen()}
                 >
                   Home
                 </a>
               </Link>
-              <Link href="/about-us" id="navbarLink">
+              <Link href="/about-us">
                 <a
+                  id={
+                    router.pathname == "/about-us"
+                      ? "navbarLinkActive"
+                      : "navbarLink"
+                  }
                   className="mx-6 font-semibold text-2xl max-w-max ml-auto mr-auto"
                   onClick={() => toggleOpen()}
                 >
