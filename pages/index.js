@@ -9,6 +9,16 @@ import { BiLinkExternal } from "react-icons/bi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Home() {
+  const earlyAccessButton = () => {
+    var element = document.getElementById("early-access-div");
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - 130;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="container">
       <main className={styles.main}>
@@ -43,14 +53,16 @@ export default function Home() {
                   </motion.button>
                 </a>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="rounded-full  bg-forevv-blue ml-7 w-64 h-16"
-                style={{ maxWidth: 266 }}
-              >
-                <p className="text-2xl font-semibold text-white">Sign up</p>
-              </motion.button>
+              <a onClick={() => earlyAccessButton()}>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="rounded-full  bg-forevv-blue ml-7 w-64 h-16"
+                  style={{ maxWidth: 266 }}
+                >
+                  <p className="text-2xl font-semibold text-white">Sign up</p>
+                </motion.button>
+              </a>
             </div>
           </div>
           <div className="col-span-5 relative ">
@@ -98,14 +110,16 @@ export default function Home() {
                   </motion.button>
                 </a>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="rounded-full  bg-forevv-blue ml-7 w-48 h-11"
-                style={{ maxWidth: 266 }}
-              >
-                <p className="text-base font-semibold text-white">Sign up</p>
-              </motion.button>
+              <a onClick={() => earlyAccessButton()}>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="rounded-full  bg-forevv-blue ml-7 w-48 h-11"
+                  style={{ maxWidth: 266 }}
+                >
+                  <p className="text-base font-semibold text-white">Sign up</p>
+                </motion.button>
+              </a>
             </div>
           </div>
           <div className="col-span-6 relative">
@@ -160,12 +174,14 @@ export default function Home() {
                 </button>
               </a>
             </Link>
-            <button
-              className="rounded-full  bg-forevv-blue w-36 h-10 ml-3"
-              style={{ maxWidth: 266 }}
-            >
-              <p className="text-sm font-semibold text-white">Sign up</p>
-            </button>
+            <a onClick={() => earlyAccessButton()}>
+              <button
+                className="rounded-full  bg-forevv-blue w-36 h-10 ml-3"
+                style={{ maxWidth: 266 }}
+              >
+                <p className="text-sm font-semibold text-white">Sign up</p>
+              </button>
+            </a>
           </div>
           <div className="flex items-center mt-10 justify-center">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
@@ -201,21 +217,24 @@ export default function Home() {
             can now actually go on a vitual walk down your memory lanes.
           </p>
 
-          <div
-            className="flex flex-row justify-end items-center"
+          <a
+            onClick={() => earlyAccessButton()}
+            className="flex flex-row justify-end items-center cursor-pointer "
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
             <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
-          </div>
-          <p className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line">
-            Get early access!
-          </p>
+          </a>
+          <a onClick={() => earlyAccessButton()}>
+            <p className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line">
+              Get early access!
+            </p>
+          </a>
         </div>
         <div className="col-span-6 hidden lg:flex 2xl:hidden justify-end relative ml-12">
           <Image src="/Feature1.svg" width={537} height={327} priority />
@@ -246,18 +265,19 @@ export default function Home() {
             Record all your milestones, the ups and downs through the journey,
             and the beautiful moments you share with your loved ones.
           </p>
-          <div
-            className="flex flex-row justify-end items-center"
+          <a
+            onClick={() => earlyAccessButton()}
+            className="flex flex-row justify-end items-center cursor-pointer "
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base cursor-pointer font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
             <AiOutlineArrowRight className="mt-2 mb-3 2xl:mt-5 absolute text-forevv-blue 2xl:scale-125" />
-          </div>
+          </a>
         </div>
 
         <div className="col-span-12 lg:col-span-6 mt-auto mb-auto">
@@ -271,21 +291,24 @@ export default function Home() {
             Collaborative Memory Lanes are common between you and your partner
             in crime - An event added by either of you is visible to the other.
           </p>
-          <div
-            className="flex flex-row justify-end items-center"
+          <a
+            onClick={() => earlyAccessButton()}
+            className="flex flex-row justify-end items-center cursor-pointer"
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
             <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
-          </div>
-          <p className="text-base lg:hidden font-semibold mt-2 text-right text-forevv-blue whitespace-pre-line">
-            Get early access!
-          </p>
+          </a>
+          <a onClick={() => earlyAccessButton()}>
+            <p className="text-base lg:hidden font-semibold mt-2 text-right text-forevv-blue whitespace-pre-line">
+              Get early access!
+            </p>
+          </a>
         </div>
         <div className="col-span-6 mt-10 hidden lg:flex 2xl:hidden justify-end relative ml-36">
           <Image src="/Feature3.svg" width={537} height={327} priority />

@@ -57,7 +57,9 @@ export default function Navbar() {
             : "white",
         boxShadow:
           router.pathname == "/sys"
-            ? `4px 8px 20px #6D8DAD00`
+            ? `4px 8px 20px rgba(109,141,173,${
+                navbarOpacity * 0.15 < 0.2 ? navbarOpacity * 0.15 : 0.2
+              })`
             : "4px 8px 20px #6D8DAD33",
       }}
     >

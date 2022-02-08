@@ -49,12 +49,12 @@ export default function Footer() {
             </p>
             <img
               src="/AppStoreBadge.svg"
-              className="block 2xl:hidden rounded-xl"
+              className="block 2xl:hidden"
               style={{ width: 102, height: 34 }}
             />
             <img
               src="/GooglePlayStoreBadge.svg"
-              className="block 2xl:hidden rounded-xl"
+              className="block 2xl:hidden"
               style={{ width: 102 }}
             />
             <img

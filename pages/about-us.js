@@ -56,28 +56,38 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="col-span-2 lg:col-span-1 flex flex-row justify-around">
+        <div className="col-span-2 flex flex-row justify-evenly ">
           <img
             src="/Logo/Nasscom.svg"
             loading="eager"
-            className="max-h-40 md:max-h-fit "
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl"
           />
           <img
             src="/Logo/Caarya.svg"
             loading="eager"
-            className="max-h-40 md:max-h-fit "
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl"
           />
-        </div>
-        <div className="col-span-2 lg:col-span-1 flex flex-row justify-around">
           <img
             src="/Logo/IED.svg"
             loading="eager"
-            className="max-h-40 md:max-h-fit "
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl hidden lg:block"
           />
           <img
             src="/Logo/Xartup.svg"
             loading="eager"
-            className="max-h-40 md:max-h-fit "
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl hidden lg:block"
+          />
+        </div>
+        <div className="col-span-2 lg:hidden flex flex-row justify-evenly">
+          <img
+            src="/Logo/IED.svg"
+            loading="eager"
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl"
+          />
+          <img
+            src="/Logo/Xartup.svg"
+            loading="eager"
+            className="h-24 w-24 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 rounded-3xl"
           />
         </div>
       </div>

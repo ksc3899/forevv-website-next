@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title> Forevv </title>
         <meta name="description" content="Live your memory lanes!" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Logo/mobileLogoBlue.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

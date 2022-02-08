@@ -113,7 +113,10 @@ export default function TeamComponent() {
           >
             {TeamData.map((item, id) => (
               <div key={id}>
-                <div className=" border-2 rounded-2xl w-64 md:w-72 ml-auto mr-auto border-forevv-blue mx-1 justify-center p-2 xl:p-14 bg-white text-center">
+                <div
+                  style={{ width: "98%" }}
+                  className="border-2 rounded-2xl w-64 md:w-72 ml-auto mr-auto border-forevv-blue mx-1 justify-center p-2 xl:p-14 bg-white text-center"
+                >
                   <div className="w-fit ml-auto mr-auto">
                     <img
                       loading="eager"
