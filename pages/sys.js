@@ -162,9 +162,8 @@ export default function sys() {
 
         {!status ? (
           <>
-            {" "}
             <div className="grid grid-cols-2 lg:max-w-lg 2xl:max-w-3xl gap-4 lg:gap-5 2xl:gap-7 mt-16 lg:mt-14 ml-auto mr-auto">
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base ">
                   First Name <span className="text-red-600">*</span>
                 </p>
@@ -172,10 +171,10 @@ export default function sys() {
                   type="text"
                   required
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 h-10 2xl:h-14 px-5"
+                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 h-10 w-72 md:w-80 lg:w-auto 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base">
                   Last Name <span className="text-red-600">*</span>
                 </p>
@@ -183,10 +182,10 @@ export default function sys() {
                   type="text"
                   required
                   onChange={(e) => setLastName(e.target.value)}
-                  className=" border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2  h-10 2xl:h-14 px-5"
+                  className=" border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-auto h-10 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base">
                   Primary Contact <span className="text-red-600">*</span>
                 </p>
@@ -195,20 +194,20 @@ export default function sys() {
                   required
                   placeholder="1234567890"
                   onChange={(e) => setPrimaryContact(e.target.value)}
-                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2  h-10 2xl:h-14 px-5"
+                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-auto h-10 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base">
                   Alternate Contact
                 </p>
                 <input
                   type="tel"
                   onChange={(e) => setSecondaryContact(e.target.value)}
-                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2  h-10 2xl:h-14 px-5"
+                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-auto h-10 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base">
                   E-mail <span className="text-red-600">*</span>
                 </p>
@@ -217,10 +216,10 @@ export default function sys() {
                   required
                   placeholder="user@example.com"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 h-10 2xl:h-14 px-5"
+                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-auto h-10 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 lg:col-span-1 flex flex-col">
+              <div className="col-span-2 lg:col-span-1 flex flex-col ml-auto mr-auto">
                 <p className="ml-2 lg:ml-3 2xl:ml-4 font-semibold text-xs 2xl:text-base">
                   Instagram handle <span className="text-red-600">*</span>
                 </p>
@@ -229,11 +228,11 @@ export default function sys() {
                   required
                   placeholder="@example"
                   onChange={(e) => setInstagram(e.target.value)}
-                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2  h-10 2xl:h-14 px-5"
+                  className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-auto h-10 2xl:h-14 px-5"
                 />
               </div>
-              <div className="col-span-2 border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 h-24 lg:h-28 2xl:h-40 p-2">
-                <div className="border lg:border-2 border-dashed border-forevv-blue w-full h-full rounded-lg lg:rounded-xl 2xl:rounded-2xl flex justify-center items-center">
+              <div className="col-span-2 ml-auto mr-auto border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2 w-72 md:w-80 lg:w-full h-24 lg:h-28 2xl:h-40 p-2">
+                <div className="border lg:border-2 border-dashed border-forevv-blue w-full h-full rounded-lg lg:rounded-xl 2xl:rounded-2xl flex  justify-center items-center">
                   <label
                     htmlFor="input"
                     id="file"
@@ -281,7 +280,7 @@ export default function sys() {
                 type="text"
                 placeholder="The story..."
                 onChange={(e) => setStory(e.target.value)}
-                className="col-span-2 border-forevv-blue border lg:border-2 flex-wrap h-24 lg:h-28 2xl:h-40 px-5"
+                className="col-span-2 ml-auto mr-auto border-forevv-blue border lg:border-2 flex-wrap w-72 md:w-80 lg:w-full h-24 lg:h-28 2xl:h-40 px-5"
               />
 
               <motion.button

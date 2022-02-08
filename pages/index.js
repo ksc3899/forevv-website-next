@@ -6,6 +6,7 @@ import AppStore from "../public/app-store.svg";
 import EarlyAccess from "../components/EarlyAccess";
 import Link from "next/link";
 import { BiLinkExternal } from "react-icons/bi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -116,11 +117,14 @@ export default function Home() {
             </p>
             <AppStore
               alt=""
-              className="ml-4 mr-2"
+              className="ml-4 mr-2 min-w-max"
               style={{ width: 32, height: 32 }}
             />
-            <p className="text-lg font-bold mx-2">App Store</p>
-            <GooglePlay className="mx-2" style={{ width: 32, height: 32 }} />
+            <p className="text-lg font-bold mx-2 flex-shrink-0">App Store</p>
+            <GooglePlay
+              className="mx-2 min-w-max"
+              style={{ width: 32, height: 32 }}
+            />
             <p className="text-lg font-bold ml-2">Playstore</p>
           </div>
         </div>
@@ -196,12 +200,19 @@ export default function Home() {
             'A walk down the memory lane' is no longer just in your head. You
             can now actually go on a vitual walk down your memory lanes.
           </p>
-          <motion.p
-            whileHover={{ x: 10 }}
-            className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+
+          <div
+            className="flex flex-row justify-end items-center"
+            id="earlyAccessArrow"
           >
-            Get early access!
-          </motion.p>
+            <motion.p
+              whileHover={{ x: -19 }}
+              className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+            >
+              Get early access!
+            </motion.p>
+            <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
+          </div>
           <p className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line">
             Get early access!
           </p>
@@ -235,15 +246,21 @@ export default function Home() {
             Record all your milestones, the ups and downs through the journey,
             and the beautiful moments you share with your loved ones.
           </p>
-          <motion.p
-            whileHover={{ x: 10 }}
-            className="text-base cursor-pointer font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue whitespace-pre-line"
+          <div
+            className="flex flex-row justify-end items-center"
+            id="earlyAccessArrow"
           >
-            Get early access!
-          </motion.p>
+            <motion.p
+              whileHover={{ x: -19 }}
+              className="text-base cursor-pointer font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue whitespace-pre-line"
+            >
+              Get early access!
+            </motion.p>
+            <AiOutlineArrowRight className="mt-2 mb-3 2xl:mt-5 absolute text-forevv-blue 2xl:scale-125" />
+          </div>
         </div>
 
-        <div className="col-span-12 lg:col-span-6 mt-auto">
+        <div className="col-span-12 lg:col-span-6 mt-auto mb-auto">
           <p className="text-base font-semibold my-7 text-center lg:text-left lg:text-3xl 2xl:text-4xl lg:whitespace-pre-line">
             Come along with your{"\n"} loved ones!
           </p>
@@ -254,12 +271,18 @@ export default function Home() {
             Collaborative Memory Lanes are common between you and your partner
             in crime - An event added by either of you is visible to the other.
           </p>
-          <motion.p
-            whileHover={{ x: 10 }}
-            className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+          <div
+            className="flex flex-row justify-end items-center"
+            id="earlyAccessArrow"
           >
-            Get early access!
-          </motion.p>
+            <motion.p
+              whileHover={{ x: -19 }}
+              className="text-base cursor-pointer hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+            >
+              Get early access!
+            </motion.p>
+            <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
+          </div>
           <p className="text-base lg:hidden font-semibold mt-2 text-right text-forevv-blue whitespace-pre-line">
             Get early access!
           </p>
@@ -267,7 +290,7 @@ export default function Home() {
         <div className="col-span-6 mt-10 hidden lg:flex 2xl:hidden justify-end relative ml-36">
           <Image src="/Feature3.svg" width={537} height={327} priority />
         </div>
-        <div className="col-span-6 mt-20 hidden 2xl:flex justify-end relative ml-44 ">
+        <div className="col-span-6 mt-10 hidden 2xl:flex justify-end relative ml-44 ">
           <Image src="/Feature3.svg" width={626} height={424} priority />
         </div>
       </div>

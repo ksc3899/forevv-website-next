@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <div
-      className="h-60 py-10 px-7 2xl:h-72 mt-14 lg:mt-24 2xl:mt-36 bottom-0 bg-footer-black"
+      className="py-10 px-7 2xl:h-72 mt-14 lg:mt-24 2xl:mt-36 bottom-0 bg-footer-black"
       style={{ marginTop: router.pathname == "/sys" ? 0 : null }}
     >
       <div className="grid grid-cols-12 gap-2 h-full items-center text-white">
@@ -30,13 +30,18 @@ export default function Footer() {
                 About
               </a>
             </Link>
-
-            <div className="flex flex-row items-center">
-              <p className="text-xs font-normal lg:text-base 2xl:text-xl lg:whitespace-pre-line mr-2">
-                Elevator Pitch
-              </p>
-              <BiLinkExternal className="mt-auto mb-auto" />
-            </div>
+            <a
+              href="https://youtu.be/9v5b6Rf2asM"
+              target={"_blank"}
+              className="flex items-center"
+            >
+              <div className="flex flex-row items-center">
+                <p className="text-xs font-normal lg:text-base 2xl:text-xl lg:whitespace-pre-line mr-2">
+                  Elevator Pitch
+                </p>
+                <BiLinkExternal className="mt-auto mb-auto" />
+              </div>
+            </a>
           </div>
           <div className="flex-col gap-5 text-start hidden lg:flex items-start">
             <p className="text-base font-semibold lg:text-lg 2xl:text-2xl lg:whitespace-pre-line">
@@ -103,7 +108,7 @@ export default function Footer() {
         </div>
         <div className="lg:col-span-2" />
         <div className="lg:hidden" />
-        <div className="flex-row col-span-12 gap-4 text-start flex lg:hidden">
+        <div className="flex-row col-span-12 gap-4 mt-4 text-start flex lg:hidden pb-0">
           <p className="text-sm font-semibold lg:text-2xl lg:whitespace-pre-line">
             COMING SOON ON
           </p>

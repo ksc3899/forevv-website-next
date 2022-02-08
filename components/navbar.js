@@ -65,7 +65,7 @@ export default function Navbar() {
         <div className="relative h-full content-center items-center">
           <Link href="/">
             <a>
-              <Logo className="relative top-1/2 -translate-y-1/2 " />
+              <Logo className="relative top-1/2 -translate-y-1/2 scale-90" />
             </a>
           </Link>
         </div>
@@ -104,7 +104,7 @@ export default function Navbar() {
           </a>
 
           <a onClick={() => earlyAccessButton()}>
-            <p className="ml-5 cursor-pointer font-semibold text-xl text-forevv-blue">
+            <p className="ml-5 cursor-pointer font-semibold text-base xl:text-xl text-forevv-blue">
               Get Early Access
             </p>
           </a>

@@ -48,8 +48,8 @@ const TeamData = [
     title: "Design Lead",
     desc: "I've been on a rather bumpy ride before finally landing in UI/UX. Love empathetic design patterns, apart from cooking. :)",
     pic: "/Team/GeethaCharan.svg",
-    linkedin: "https://www.linkedin.com/in/aarush-sinha-66a790201/",
-    instagram: "https://www.instagram.com/aarush.py/",
+    linkedin: "https://www.linkedin.com/in/geethacharan-nallana-06691518b",
+    instagram: "https://www.instagram.com/gc_09_12/",
   },
   {
     name: "Krishna Varma Sagi",
@@ -113,7 +113,7 @@ export default function TeamComponent() {
           >
             {TeamData.map((item, id) => (
               <div key={id}>
-                <div className=" border-2 rounded-2xl border-forevv-blue mx-1 justify-center p-2 lg:p-14 bg-white text-center">
+                <div className=" border-2 rounded-2xl w-64 md:w-72 ml-auto mr-auto border-forevv-blue mx-1 justify-center p-2 xl:p-14 bg-white text-center">
                   <div className="w-fit ml-auto mr-auto">
                     <img
                       loading="eager"

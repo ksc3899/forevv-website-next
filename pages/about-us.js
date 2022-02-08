@@ -104,10 +104,12 @@ export default function AboutUs() {
             >
               <div
                 style={{
-                  width: "98%",
+                  height: "90%",
+                  width: "90%",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  height: "98%",
+                  marginTop: "auto",
+                  marginBottom: "auto",
                   boxShadow: "4px 8px 30px #6D8DAD33",
                   borderRadius: 8,
                 }}
@@ -138,10 +140,12 @@ export default function AboutUs() {
               </div>
               <div
                 style={{
-                  width: "98%",
+                  height: "90%",
+                  width: "90%",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  height: "98%",
+                  marginTop: "auto",
+                  marginBottom: "auto",
                   boxShadow: "4px 8px 30px #6D8DAD33",
                   borderRadius: 8,
                 }}
