@@ -105,8 +105,10 @@ export default function AboutUs() {
               <div
                 style={{
                   width: "98%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   height: "98%",
-                  boxShadow: "4px 8px 10px #6D8DAD33",
+                  boxShadow: "4px 8px 30px #6D8DAD33",
                   borderRadius: 8,
                 }}
                 className="flex flex-col bg-white text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"
@@ -137,8 +139,10 @@ export default function AboutUs() {
               <div
                 style={{
                   width: "98%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   height: "98%",
-                  boxShadow: "4px 8px 10px #6D8DAD33",
+                  boxShadow: "4px 8px 30px #6D8DAD33",
                   borderRadius: 8,
                 }}
                 className="flex flex-col bg-white text-center lg:text-left lg:flex-row px-5 py-7 lg:px-20 lg:py-12 items-center justify-center"

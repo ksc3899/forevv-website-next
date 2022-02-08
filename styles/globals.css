@@ -160,8 +160,48 @@ img#teamMemberDp:hover {
   border-bottom: 3px solid #000;
 }
 
+@keyframes underline {
+  from {
+    border-bottom: 2px solid transparent;
+  }
+  to {
+    border-bottom: 2px solid #000;
+  }
+}
+
+/* #navbarLink {
+  border-bottom: 3px solid transparent;
+}
+
 #navbarLink:hover {
+  border-bottom: 3px solid #000;
+  animation-name: underline;
+  animation-duration: 1s;
   font-weight: bold;
+}  */
+
+#navbarLink {
+  /* display: inline-block; */
+  position: relative;
+  /* color: #0087ca; */
+}
+
+#navbarLink:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4896ef;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#navbarLink:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 #parentDiv {

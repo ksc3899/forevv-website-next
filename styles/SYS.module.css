@@ -20,8 +20,8 @@
 }
 
 .SYSdiv {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, #ffffff70 80%, white),
+  height: 110vh;
+  background-image: linear-gradient(to bottom, #ffffff80 90%, white),
     url("../public/SYSbg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,13 +30,16 @@
 }
 
 .SYSsvg {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
 }
 
 .Share_Your_Story {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   transform: translate(271 108);
   font-size: 120px;
   letter-spacing: 0.044em;

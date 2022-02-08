@@ -9,6 +9,45 @@ function EarlyAccess() {
   const [name, setName] = React.useState("");
   const [contact, setContact] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [error, setError] = React.useState(false);
+  const [loading, setLoading] = React.useState("Let me try!");
+
+  const handleValidate = () => {
+    if (name === "") {
+      setError(true);
+      return false;
+    } else {
+      setError(false);
+    }
+    if (email === "") {
+      setError(true);
+      return false;
+    } else {
+      setError(false);
+    }
+    if (contact === "") {
+      setError(true);
+      return false;
+    } else {
+      if (contact.length === 10 && contact[0] !== "0") {
+        setError(false);
+      } else {
+        setError(true);
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const handleSubmit = async () => {
+    if (!handleValidate()) {
+      null;
+    } else {
+      setLoading("Submitted!");
+      addEarlyAccessDetails(name, contact, email);
+    }
+  };
+
   return (
     <div
       id="early-access-div"
@@ -63,7 +102,6 @@ function EarlyAccess() {
             type="text"
             placeholder="Your name"
             required
-            value={name}
             onChange={(e) => setName(e.target.value)}
             className="col-span-2 border-forevv-blue rounded-lg border lg:border-2 h-10 2xl:h-14 px-5"
           />
@@ -71,7 +109,6 @@ function EarlyAccess() {
             type="tel"
             placeholder="Contact Number"
             required
-            value={contact}
             onChange={(e) => setContact(e.target.value)}
             className="col-span-2 lg:col-span-1 border-forevv-blue rounded-lg border lg:border-2  h-10 2xl:h-14 px-5"
           />
@@ -79,7 +116,6 @@ function EarlyAccess() {
             type="email"
             placeholder="E-mail"
             required
-            value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="col-span-2 lg:col-span-1 border-forevv-blue rounded-lg border lg:border-2 h-10 2xl:h-14 px-5"
           />
@@ -88,13 +124,18 @@ function EarlyAccess() {
             whileTap={{ scale: 0.95 }}
             className="col-span-2 rounded-full lg:mt-6 2xl:mt-8 bg-forevv-blue w-32 h-10 lg:w-44 lg:h-11 2xl:w-60 2xl:h-14 ml-auto mr-auto"
             style={{ maxWidth: 266 }}
-            onClick={() => addEarlyAccessDetails(name, contact, email)}
-            // onClick={() => getData()}
+            onClick={() => handleSubmit()}
           >
             <p className="text-sm lg:text-base 2xl:text-xl font-semibold text-white">
-              Let me try!
+              {loading}
             </p>
           </motion.button>
+          {error === true ? (
+            <p className="col-span-2 font-semibold text-xs 2xl:text-base text-red-600 text-center">
+              Please fill all required fields/Check the format of details
+              provided
+            </p>
+          ) : null}
         </div>
       </div>
       <div className="col-span-1" />

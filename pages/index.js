@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import GooglePlay from "../public/google-play.svg";
 import AppStore from "../public/app-store.svg";
 import EarlyAccess from "../components/EarlyAccess";
+import Link from "next/link";
+import { BiLinkExternal } from "react-icons/bi";
 
 export default function Home() {
   return (
@@ -22,16 +24,24 @@ export default function Home() {
               innovative style.
             </p>
             <div className="flex relative mt-16 justify-start">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="border-2 rounded-full border-forevv-blue w-64 h-16"
-                style={{ maxWidth: 266 }}
-              >
-                <p className="text-2xl font-semibold text-forevv-blue">
-                  Contact Us!
-                </p>
-              </motion.button>
+              <Link href="/sys">
+                <a target={"_blank"}>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="border-2 rounded-full border-forevv-blue w-72 h-16 flex flex-row items-center justify-center"
+                    style={{ maxWidth: 266 }}
+                  >
+                    <p className="text-2xl font-semibold text-forevv-blue">
+                      Share your Story
+                    </p>
+                    <BiLinkExternal
+                      className="mt-auto mb-auto ml-2 text-forevv-blue"
+                      size={24}
+                    />
+                  </motion.button>
+                </a>
+              </Link>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -47,7 +57,7 @@ export default function Home() {
           </div>
           <div className="col-span-7 flex items-center mt-24 justify-start">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
-              Coming Soon on
+              Coming soon on
             </p>
             <AppStore alt="" className="ml-5 mr-2" />
             <p className="text-xl font-bold mx-2">App Store</p>
@@ -69,16 +79,24 @@ export default function Home() {
               innovative style.
             </p>
             <div className="flex relative mt-16 justify-start">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="border-2 rounded-full border-forevv-blue w-48 h-11"
-                style={{ maxWidth: 266 }}
-              >
-                <p className="text-base font-semibold text-forevv-blue">
-                  Contact Us!
-                </p>
-              </motion.button>
+              <Link href="/sys">
+                <a target={"_blank"}>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="border-2 rounded-full border-forevv-blue w-48 h-11 flex flex-row justify-center items-center"
+                    style={{ maxWidth: 266 }}
+                  >
+                    <p className="text-base font-semibold text-forevv-blue">
+                      Share your Story
+                    </p>
+                    <BiLinkExternal
+                      className="mt-auto mb-auto ml-2 text-forevv-blue"
+                      size={18}
+                    />
+                  </motion.button>
+                </a>
+              </Link>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -94,7 +112,7 @@ export default function Home() {
           </div>
           <div className="col-span-6 flex items-center mt-16 justify-center lg:justify-start">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
-              Coming Soon on
+              Coming soon on
             </p>
             <AppStore
               alt=""
@@ -122,14 +140,22 @@ export default function Home() {
             innovative{"\n"} style.
           </p>
           <div className="flex mt-10 justify-center">
-            <button
-              className="border-2 rounded-full border-forevv-blue w-36 h-10 "
-              style={{ maxWidth: 266 }}
-            >
-              <p className="text-sm font-semibold text-forevv-blue">
-                Contact Us!
-              </p>
-            </button>
+            <Link href="/sys">
+              <a target={"_blank"}>
+                <button
+                  className="border-2 rounded-full border-forevv-blue w-40 h-10 flex flex-row justify-center items-center"
+                  style={{ maxWidth: 266 }}
+                >
+                  <p className="text-sm font-semibold text-forevv-blue">
+                    Share your Story
+                  </p>
+                  <BiLinkExternal
+                    className="mt-auto mb-auto ml-1 text-forevv-blue"
+                    size={14}
+                  />
+                </button>
+              </a>
+            </Link>
             <button
               className="rounded-full  bg-forevv-blue w-36 h-10 ml-3"
               style={{ maxWidth: 266 }}
@@ -139,11 +165,11 @@ export default function Home() {
           </div>
           <div className="flex items-center mt-10 justify-center">
             <p className="text-base font-semibold lg:text-2xl lg:font-bold min-w-max">
-              Coming Soon on
+              Coming soon on
             </p>
             <AppStore
               alt=""
-              className="mx-10"
+              className="ml-6 mr-7"
               style={{ width: 32, height: 32 }}
             />
             <GooglePlay alt="" style={{ width: 32, height: 32 }} />
@@ -153,7 +179,7 @@ export default function Home() {
 
       <EarlyAccess />
 
-      <div className="grid grid-cols-12 relative mt-8 lg:mt-20 items-center mx-6 lg:mx-0">
+      <div className="grid grid-cols-12 relative mt-8 lg:mt-28 items-center mx-6 lg:mx-0">
         <div className="col-span-12 lg:col-span-6">
           <p className="text-base font-semibold my-7 text-center lg:text-left lg:text-3xl 2xl:text-4xl lg:whitespace-pre-line">
             Create cool visual memory{"\n"} lanes!

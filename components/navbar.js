@@ -1,20 +1,71 @@
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Logo from "../public/Logo/logo.svg";
-import MobileLogo from "../public/Logo/mobileLogo.svg";
+import Logo from "../public/Logo/Title.svg";
+import MobileLogo from "../public/Logo/mobileLogoBlue.svg";
 import { MobileMenu } from "./MobileMenu";
 import { BiLinkExternal } from "react-icons/bi";
 import { useRouter } from "next/router";
+import Router from "next/router";
 
 export default function Navbar() {
   const router = useRouter();
+  const [navbarOpacity, setNavbarOpacity] = React.useState(0);
+  const listenScrollEvent = () => {
+    if (window.scrollY > window.innerHeight / 2) {
+      let opacity =
+        ((window.scrollY - window.innerHeight / 2) / window.innerHeight) * 2;
+      setNavbarOpacity(opacity);
+    } else {
+      setNavbarOpacity(0);
+    }
+  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
+  const earlyAccessButton = async () => {
+    if (router.pathname == "/sys") {
+      await Router.push("/");
+      var element = document.getElementById("early-access-div");
+      var elementPosition = element.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.pageYOffset - 130;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      var element = document.getElementById("early-access-div");
+      var elementPosition = element.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.pageYOffset - 130;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <header className="w-full z-10 fixed bg-white h-12 shadow-[0_4px_8px_#6D8DAD33] xl:h-14">
+    <header
+      className="w-full z-10 fixed h-12 xl:h-14"
+      style={{
+        background:
+          router.pathname == "/sys"
+            ? `rgba(255,255,255,${navbarOpacity})`
+            : "white",
+        boxShadow:
+          router.pathname == "/sys"
+            ? `4px 8px 20px #6D8DAD00`
+            : "4px 8px 20px #6D8DAD33",
+      }}
+    >
       <div className="mx-14 hidden md:flex flex-row h-full">
         <div className="relative h-full content-center items-center">
           <Link href="/">
             <a>
-              <Logo className="w-28 xl:w-36 relative top-1/2 -translate-y-1/2 " />
+              <Logo className="relative top-1/2 -translate-y-1/2 " />
             </a>
           </Link>
         </div>
@@ -39,28 +90,20 @@ export default function Navbar() {
               About Us
             </a>
           </Link>
-          <Link href="/sys">
-            <a className="flex mx-5 items-center">
-              <p className="font-semibold text-base xl:text-xl mr-2">
-                Elevator Pitch
-              </p>
-              <BiLinkExternal className="mt-auto mb-auto" />
-            </a>
-          </Link>
-          <a
-            id="navbarLink"
-            onClick={() => {
-              var element = document.getElementById("early-access-div");
-              var headerOffset = 45;
-              var elementPosition = element.getBoundingClientRect().top;
-              var offsetPosition = elementPosition + window.pageYOffset - 130;
 
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }}
+          <a
+            href="https://youtu.be/9v5b6Rf2asM"
+            target={"_blank"}
+            className="flex mx-5 items-center"
+            id="navbarLink"
           >
+            <p className="font-semibold text-base xl:text-xl mr-2">
+              Elevator Pitch
+            </p>
+            <BiLinkExternal className="mt-auto mb-auto" />
+          </a>
+
+          <a onClick={() => earlyAccessButton()}>
             <p className="ml-5 cursor-pointer font-semibold text-xl text-forevv-blue">
               Get Early Access
             </p>
@@ -73,7 +116,7 @@ export default function Navbar() {
         ) : null}
         <Link href="/">
           <a>
-            <MobileLogo className="relative top-1/2 -translate-y-1/2 shadow-md rounded-full w-6 h-6" />
+            <MobileLogo className="relative -translate-y-1/2 top-1/2 shadow-md rounded-full" />
           </a>
         </Link>
       </div>

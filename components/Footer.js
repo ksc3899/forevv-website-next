@@ -3,10 +3,16 @@ import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 import { IoIosMail } from "react-icons/io";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
-    <div className="h-60 py-10 px-7 2xl:h-72 mt-14 lg:mt-24 2xl:mt-36 bottom-0 bg-footer-black">
+    <div
+      className="h-60 py-10 px-7 2xl:h-72 mt-14 lg:mt-24 2xl:mt-36 bottom-0 bg-footer-black"
+      style={{ marginTop: router.pathname == "/sys" ? 0 : null }}
+    >
       <div className="grid grid-cols-12 gap-2 h-full items-center text-white">
         <div className="lg:col-span-2" />
         <div className="col-span-12 lg:col-span-8 flex flex-row relative justify-between">

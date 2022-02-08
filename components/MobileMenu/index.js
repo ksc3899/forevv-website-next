@@ -39,9 +39,9 @@ export const MobileMenu = () => {
       ref={containerRef}
     >
       {isOpen ? (
-        <motion.div initial={false} animate={"open"}>
-          <motion.div className="background" variants={sidebar} />
-          <motion.ul>
+        <motion.div>
+          <motion.div />
+          <motion.ul initial={{ y: "-100%" }} animate={{ y: 0 }}>
             <Logo
               style={{
                 marginLeft: "auto",
@@ -75,15 +75,17 @@ export const MobileMenu = () => {
                   About Us
                 </a>
               </Link>
-              <Link href="/sys" id="navbarLink">
-                <a
-                  className="flex mx-6 items-center text-center justify-center"
-                  onClick={() => toggleOpen()}
-                >
-                  <p className="font-semibold text-2xl pl-8">Elevator Pitch</p>
-                  <BiLinkExternal className="h-5 w-5 ml-2" />
-                </a>
-              </Link>
+
+              <a
+                href="https://youtu.be/9v5b6Rf2asM"
+                target={"_blank"}
+                className="flex mx-6 items-center text-center justify-center"
+                onClick={() => toggleOpen()}
+              >
+                <p className="font-semibold text-2xl pl-8">Elevator Pitch</p>
+                <BiLinkExternal className="h-5 w-5 ml-2" />
+              </a>
+
               <a
                 onClick={() => {
                   toggleOpen();

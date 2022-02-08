@@ -7,59 +7,60 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { BsCloudUpload } from "react-icons/bs";
 
 export default function sys() {
-  const [firstName, setFirstName] = React.useState(null);
-  const [lastName, setLastName] = React.useState(null);
-  const [primaryContact, setPrimaryContact] = React.useState(null);
-  const [secondaryContact, setSecondaryContact] = React.useState(null);
-  const [email, setEmail] = React.useState(null);
-  const [instagram, setInstagram] = React.useState(null);
-  const [media, setMedia] = React.useState(null);
-  const [story, setStory] = React.useState(null);
+  const [firstName, setFirstName] = React.useState("");
+  const [lastName, setLastName] = React.useState("");
+  const [primaryContact, setPrimaryContact] = React.useState("");
+  const [secondaryContact, setSecondaryContact] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [instagram, setInstagram] = React.useState("");
+  const [media, setMedia] = React.useState("");
+  const [story, setStory] = React.useState("");
   const [error, setError] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
   const [status, setStatus] = React.useState(false);
 
   const storage = getStorage();
   const handleValidate = () => {
-    if (firstName === null) {
+    if (firstName === "") {
       setError(true);
       return false;
     } else {
       setError(false);
     }
-    if (lastName === null) {
+    if (lastName === "") {
       setError(true);
       return false;
     } else {
       setError(false);
     }
-    if (primaryContact === null) {
+    if (primaryContact === "") {
       setError(true);
       return false;
     } else {
-      if (primaryContact.length === 13 && primaryContact[0] === "+") {
+      if (primaryContact.length === 10 && primaryContact[0] !== "0") {
         setError(false);
       } else {
         setError(true);
         return false;
       }
     }
-    if (secondaryContact === null) {
+    if (secondaryContact === "") {
       null;
     } else {
-      if (secondaryContact.length === 13 && primaryContact[0] === "+") {
+      if (secondaryContact.length === 10 && secondaryContact[0] !== "0") {
         setError(false);
       } else {
         setError(true);
         return false;
       }
     }
-    if (email === null) {
+    if (email === "") {
       setError(true);
       return false;
     } else {
       setError(false);
     }
-    if (instagram === null) {
+    if (instagram === "") {
       setError(true);
       return false;
     } else {
@@ -70,7 +71,7 @@ export default function sys() {
         return false;
       }
     }
-    if (media === null) {
+    if (media === "") {
       setError(true);
       return false;
     } else {
@@ -79,12 +80,13 @@ export default function sys() {
     return true;
   };
 
-  React.useEffect(() => handleValidate());
+  // React.useEffect(() => handleValidate());
 
   const handleSubmit = async () => {
     if (!handleValidate()) {
       null;
     } else {
+      setLoading(true);
       const selectedFile = document.getElementById("input").files[0];
       const mediaRef = ref(storage, `images/${primaryContact}`);
       await uploadBytes(mediaRef, selectedFile).then((snapshot) => {
@@ -106,15 +108,15 @@ export default function sys() {
     }
   };
   return (
-    <>
-      <div className={styles.SYSdiv}>
-        <div className={styles.SYSsvg}>
-          <img src="/Exclusion 2.svg" />
-          <p className={styles.Share_Your_Story}>Share Your Story</p>
-        </div>
+    <div className="bg-white pb-14 lg:pb-24 2xl:pb-36">
+      <div className={styles.SYSdiv}></div>
+      <div className={styles.SYSsvg}>
+        <img src="/Exclusion 2.svg" />
+        <p className={styles.Share_Your_Story}>Share Your Story</p>
       </div>
-      <div className="container px-12 lg:px-0">
-        <div className="flex flex-col lg:flex-row lg:justify-around 2xl:justify-between items-center">
+
+      <div className="container px-12 lg:px-0 mt-10 lg:mt-14 2xl:mt-20 ">
+        <div className="flex flex-col lg:flex-row lg:justify-around  items-center">
           <p className="text-xl lg:text-4xl 2xl:text-6xl font-semibold">
             Your Chance to
           </p>
@@ -191,7 +193,7 @@ export default function sys() {
                 <input
                   type="tel"
                   required
-                  placeholder="+XX1234567890"
+                  placeholder="1234567890"
                   onChange={(e) => setPrimaryContact(e.target.value)}
                   className="border-forevv-blue rounded-lg lg:rounded-xl 2xl:rounded-2xl border lg:border-2  h-10 2xl:h-14 px-5"
                 />
@@ -249,7 +251,7 @@ export default function sys() {
                       size={60}
                       className="hidden 2xl:block ml-auto mr-auto"
                     />
-                    {media === null ? (
+                    {media === "" ? (
                       <>
                         Upload your media{" "}
                         <span className="text-red-600">*</span>
@@ -290,7 +292,7 @@ export default function sys() {
                 onClick={() => handleSubmit()}
               >
                 <p className="text-sm lg:text-base 2xl:text-xl font-semibold text-white">
-                  Share Your Story
+                  {loading ? "Submitting..." : "Share Your Story"}
                 </p>
               </motion.button>
               {error === true ? (
@@ -336,6 +338,6 @@ export default function sys() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

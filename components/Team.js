@@ -3,15 +3,6 @@ import Rectangle1 from "../public/Team/Rectangle 222.svg";
 import Rectangle2 from "../public/Team/Rectangle 220.svg";
 import Rectangle1Small from "../public/Team/Rectangle 222 small.svg";
 import Rectangle2Small from "../public/Team/Rectangle 220 small.svg";
-import SaiCharan from "../public/Team/SaiCharan.svg";
-import AarushSinha from "../public/Team/AarushSinha.svg";
-import ShivanshShukla from "../public/Team/ShivanshShukla.svg";
-import VanshikaThakur from "../public/Team/VanshikaThakur.svg";
-import GeethaCharan from "../public/Team/GeethaCharan.svg";
-import AshutoshTewari from "../public/Team/AshutoshTewari.svg";
-import AnujBatra from "../public/Team/AnujBatra.svg";
-import NikhilSrivastava from "../public/Team/NikhilSrivastava.svg";
-import KrishnaVarma from "../public/Team/KrishnaVarma.svg";
 import Left from "../public/left.svg";
 import Linkedin from "../public/Linkedin.svg";
 import Insta from "../public/Insta.svg";
@@ -23,7 +14,7 @@ const TeamData = [
   {
     name: "Sai Charan Kommana",
     title: "Founder & CEO",
-    desc: "“Main udna chahta hu, daudna chahta hu, girna bhi chahta hu. Bas rukna nahi chahta”. These famous lines from YJHD best describe me ;).",
+    desc: "“Main udna chahta hu, daudna chahta hu, girna bhi chahta hu. Bas rukna nahi chahta”. These lines best describe me ;).",
     pic: "/Team/SaiCharan.svg",
     linkedin: "https://www.linkedin.com/in/sai-charan-kommana/",
     instagram: "https://www.instagram.com/_char_a_n_/",
@@ -31,7 +22,7 @@ const TeamData = [
   {
     name: "Shivansh Shukla",
     title: "Software Developer",
-    desc: "Backend developer specializing in Python & Django. When not on projects, you will find me hooked to a sci-fi book or a game.",
+    desc: "Backend developer specializing in Python & Django. When not on projects, you'll find me hooked to a sci-fi book.",
     pic: "/Team/ShivanshShukla.svg",
     linkedin: "https://www.linkedin.com/in/shuklashivansh/",
     instagram: "https://www.instagram.com/shivansh.dmg/",
@@ -55,7 +46,7 @@ const TeamData = [
   {
     name: "Geetha Charan",
     title: "Design Lead",
-    desc: "Been on a rather bumpy ride before finally landing in UI/UX. Love empathetic design patterns, apart from cooking. :)",
+    desc: "I've been on a rather bumpy ride before finally landing in UI/UX. Love empathetic design patterns, apart from cooking. :)",
     pic: "/Team/GeethaCharan.svg",
     linkedin: "https://www.linkedin.com/in/aarush-sinha-66a790201/",
     instagram: "https://www.instagram.com/aarush.py/",
@@ -71,25 +62,25 @@ const TeamData = [
   {
     name: "Anuj Batra",
     title: "Business Advisor",
-    desc: "",
+    desc: "A versatile leader with 25+ years of solid track record in leading start-ups, rapidly growing companies & building brands.",
     pic: "/Team/AnujBatra.svg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/anujbatra1/",
     instagram: "",
   },
   {
     name: "Ashutosh Tewari",
     title: "Business Advisor",
-    desc: "",
+    desc: "A mid-management professional with 17+ years of experience spanning IT Services, management consulting & supply chain.",
     pic: "/Team/AshutoshTewari.svg",
-    linkedin: "",
-    instagram: "",
+    linkedin: "https://www.linkedin.com/in/ashutoshtewari/",
+    instagram: "https://www.instagram.com/ashtew27/",
   },
   {
     name: "Nikhil Srivatsa",
     title: "Technical Advisor",
-    desc: "",
+    desc: "Multipreneur who has seen the full spectrum of startup cycles, collecting a wide variety of experiences along the way.",
     pic: "/Team/NikhilSrivastava.svg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/nikhil-srivatsa-a4bb0045/",
     instagram: "",
   },
 ];
