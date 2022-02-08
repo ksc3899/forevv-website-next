@@ -44,7 +44,7 @@ export default function Home() {
                     style={{ maxWidth: 266 }}
                   >
                     <p className="text-2xl font-semibold text-forevv-blue">
-                      Share your Story
+                      Share your story
                     </p>
                     <BiLinkExternal
                       className="mt-auto mb-auto ml-2 text-forevv-blue"
@@ -101,7 +101,7 @@ export default function Home() {
                     style={{ maxWidth: 266 }}
                   >
                     <p className="text-base font-semibold text-forevv-blue">
-                      Share your Story
+                      Share your story
                     </p>
                     <BiLinkExternal
                       className="mt-auto mb-auto ml-2 text-forevv-blue"
@@ -165,7 +165,7 @@ export default function Home() {
                   style={{ maxWidth: 266 }}
                 >
                   <p className="text-sm font-semibold text-forevv-blue">
-                    Share your Story
+                    Share your story
                   </p>
                   <BiLinkExternal
                     className="mt-auto mb-auto ml-1 text-forevv-blue"

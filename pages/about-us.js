@@ -56,7 +56,7 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="col-span-2 flex flex-row justify-evenly ">
+        <div className="col-span-2 mt-5 lg:mt-9 2xl:mt-11 flex flex-row justify-evenly ">
           <img
             src="/Logo/Nasscom.svg"
             loading="eager"
