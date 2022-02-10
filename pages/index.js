@@ -219,22 +219,25 @@ export default function Home() {
 
           <a
             onClick={() => earlyAccessButton()}
-            className="flex flex-row justify-end items-center cursor-pointer "
+            className="flex-row justify-end items-center cursor-pointer hidden lg:flex "
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue hover:text-forevv-hover-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
-            <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
+            <AiOutlineArrowRight className="mt-2 absolute text-forevv-hover-blue 2xl:scale-125" />
           </a>
-          <a onClick={() => earlyAccessButton()}>
-            <p className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line">
+          <div className="w-full flex justify-end">
+            <button
+              onClick={() => earlyAccessButton()}
+              className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line"
+            >
               Get early access!
-            </p>
-          </a>
+            </button>
+          </div>
         </div>
         <div className="col-span-6 hidden lg:flex 2xl:hidden justify-end relative ml-12">
           <Image src="/Feature1.svg" width={537} height={327} priority />
@@ -267,17 +270,25 @@ export default function Home() {
           </p>
           <a
             onClick={() => earlyAccessButton()}
-            className="flex flex-row justify-end items-center cursor-pointer "
+            className="flex-row justify-end items-center cursor-pointer hidden lg:flex"
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base font-semibold lg:text-base 2xl:text-2xl mt-2 mb-3 2xl:mt-5 text-right text-forevv-blue hover:text-forevv-hover-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
-            <AiOutlineArrowRight className="mt-2 mb-3 2xl:mt-5 absolute text-forevv-blue 2xl:scale-125" />
+            <AiOutlineArrowRight className="mt-2 mb-3 2xl:mt-5 absolute text-forevv-hover-blue 2xl:scale-125" />
           </a>
+          <div className="w-full flex justify-end">
+            <button
+              onClick={() => earlyAccessButton()}
+              className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line"
+            >
+              Get early access!
+            </button>
+          </div>
         </div>
 
         <div className="col-span-12 lg:col-span-6 mt-auto mb-auto">
@@ -293,22 +304,25 @@ export default function Home() {
           </p>
           <a
             onClick={() => earlyAccessButton()}
-            className="flex flex-row justify-end items-center cursor-pointer"
+            className="flex-row justify-end items-center cursor-pointer hidden lg:flex "
             id="earlyAccessArrow"
           >
             <motion.p
               whileHover={{ x: -19 }}
-              className="text-base hidden lg:block font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue whitespace-pre-line"
+              className="text-base font-semibold lg:text-base 2xl:text-2xl mt-2 text-right text-forevv-blue hover:text-forevv-hover-blue whitespace-pre-line"
             >
               Get early access!
             </motion.p>
-            <AiOutlineArrowRight className="mt-2 absolute text-forevv-blue 2xl:scale-125" />
+            <AiOutlineArrowRight className="mt-2 absolute text-forevv-hover-blue 2xl:scale-125" />
           </a>
-          <a onClick={() => earlyAccessButton()}>
-            <p className="text-base lg:hidden font-semibold mt-2 text-right text-forevv-blue whitespace-pre-line">
+          <div className="w-full flex justify-end">
+            <button
+              onClick={() => earlyAccessButton()}
+              className="text-base lg:hidden font-semibold mt-2 mb-3 text-right text-forevv-blue whitespace-pre-line"
+            >
               Get early access!
-            </p>
-          </a>
+            </button>
+          </div>
         </div>
         <div className="col-span-6 mt-10 hidden lg:flex 2xl:hidden justify-end relative ml-36">
           <Image src="/Feature3.svg" width={537} height={327} priority />

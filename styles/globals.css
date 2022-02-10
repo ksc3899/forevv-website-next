@@ -195,7 +195,7 @@ img#teamMemberDp:hover {
   height: 2px;
   bottom: -1px;
   left: 0;
-  background-color: #4896ef;
+  background-color: #000;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

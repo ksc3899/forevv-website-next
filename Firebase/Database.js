@@ -1,17 +1,5 @@
 import { db } from "./Firebase";
-import {
-  collection,
-  addDoc,
-  doc,
-  setDoc,
-  getDoc,
-  arrayUnion,
-  arrayRemove,
-  getDocs,
-  deleteDoc,
-  query,
-  collectionGroup,
-} from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const storage = getStorage();
@@ -72,17 +60,6 @@ export async function addContestDetails(
       },
       { merge: true }
     );
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-}
-
-export async function getData() {
-  try {
-    const querySnapshot = await getDocs(collection(db, "earlyAccess"));
-    querySnapshot.forEach((doc) => {
-      console.log(doc.id, " => ", doc.data());
-    });
   } catch (e) {
     console.error("Error adding document: ", e);
   }

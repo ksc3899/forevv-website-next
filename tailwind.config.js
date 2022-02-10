@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         "forevv-blue": "#4896EF",
         "footer-black": "#303030",
+        "forevv-hover-blue": "#1B62B3",
       },
     },
     screens: {
